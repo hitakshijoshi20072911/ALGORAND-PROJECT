@@ -25,6 +25,11 @@ This project is designed to be **beginner-friendly**, making it a great starting
 
 ---
 
+Deployed Smart Contract
+
+Contract Address: QVQILFGJ4E6SMTZ2BXWH4YGKXLHKFZDM4HBLS3POFY75R7GKFSZBEJC3OY
+
+---
 ## 📜 Smart Contract Code
 ```typescript
 import { Contract, GlobalState } from "@algorandfoundation/tealscript";
