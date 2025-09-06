@@ -27,4 +27,21 @@ This project is designed to be **beginner-friendly**, making it a great starting
 
 ## 📜 Smart Contract Code
 ```typescript
-//paste your code
+import { Contract, GlobalState } from "@algorandfoundation/tealscript";
+
+export class SuggestionBox extends Contract {
+
+  // Global state to store the latest suggestion
+  suggestion = GlobalState<string>({ key: "suggestion", initialValue: "" });
+
+  // Function to add a suggestion
+  AddSuggestion(title: string, message: string): string {
+    this.suggestion.value = title + " - " + message;
+    return title;
+  }
+
+  // Function to fetch the current suggestion
+  GetSuggestion(): string {
+    return this.suggestion.value;
+  }
+}
